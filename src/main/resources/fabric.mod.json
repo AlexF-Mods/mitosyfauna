@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "mitosyfauna",
+	"version": "${version}",
+	"name": "Mitos y Fauna",
+	"description": "Fauna nativa colombiana (Chigüiro, Oso de anteojos, Cóndor, Rana dardo venenosa), mitos y leyendas nocturnos (El Mohán, La Patasola, La Llorona, El Sombrerón) y comerciantes locales (Tendero de barrio y Vendedor ambulante) con Pesos Colombianos.",
+	"authors": [
+		"AlexF6"
+	],
+	"contact": {
+		"homepage": "https://github.com/AlexF6/mitosyfauna",
+		"sources": "https://github.com/AlexF6/mitosyfauna",
+		"issues": "https://github.com/AlexF6/mitosyfauna/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mitosyfauna/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.alexf6.mitosyfauna.MitosYFaunaMod"
+		],
+		"client": [
+			"io.github.alexf6.mitosyfauna.client.MitosYFaunaClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"gastronomia": "*"
+	}
+}

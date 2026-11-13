@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "combat",
+  "ingredients": [
+    "mitosyfauna:dart_toxin",
+    "mitosyfauna:condor_feather",
+    "minecraft:stick"
+  ],
+  "result": {
+    "id": "mitosyfauna:poison_dart",
+    "count": 3
+  }
+}

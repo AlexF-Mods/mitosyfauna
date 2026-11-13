@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mitosyfauna:item/vendedor_ambulante_spawn_egg"
+  }
+}
