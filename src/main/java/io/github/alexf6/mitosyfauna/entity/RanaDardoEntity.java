@@ -7,6 +7,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -134,7 +135,7 @@ public class RanaDardoEntity extends Animal {
                     : new ItemStack(ModItems.POISON_DART);
             stack.consume(1, player);
             if (!player.getInventory().add(output)) {
-                player.drop(output, false);
+                player.drop(output, false, Prediction.SERVER_ONLY);
             }
             toxinCooldownTicks = 300;
             this.playSound(SoundEvents.BOTTLE_FILL, 0.9F, 1.3F);

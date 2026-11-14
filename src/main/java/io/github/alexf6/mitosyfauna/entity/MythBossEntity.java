@@ -48,7 +48,7 @@ public abstract class MythBossEntity extends Monster {
             BossEvent.BossBarColor barColor
     ) {
         super(entityType, level);
-        this.bossEvent = new ServerBossEvent(this.getDisplayName(), barColor, BossEvent.BossBarOverlay.PROGRESS);
+        this.bossEvent = new ServerBossEvent(this.getUUID(), this.getDisplayName(), barColor, BossEvent.BossBarOverlay.PROGRESS);
         this.bossEvent.setVisible(true);
         this.xpReward = 25;
     }

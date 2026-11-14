@@ -27,7 +27,7 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.animal.horse.AbstractHorse;
+import net.minecraft.world.entity.animal.equine.AbstractHorse;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -158,7 +158,7 @@ public class SombreronEntity extends MythBossEntity {
             double joltX = (this.random.nextDouble() - 0.5) * 0.7;
             double joltZ = (this.random.nextDouble() - 0.5) * 0.7;
             mount.push(joltX, 0.25, joltZ);
-            mount.hurtMarked = true;
+            mount.needsSync = true;
             this.playSound(SoundEvents.HORSE_ANGRY, 1.0F, 0.85F);
         }
         if (distSq <= 16.0 && rider instanceof Player player

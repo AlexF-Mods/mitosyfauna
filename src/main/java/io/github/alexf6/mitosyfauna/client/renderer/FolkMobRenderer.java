@@ -49,7 +49,10 @@ public class FolkMobRenderer<T extends Mob, M extends EntityModel<FolkRenderStat
     public void extractRenderState(T entity, FolkRenderState state, float partialTick) {
         super.extractRenderState(entity, state, partialTick);
         state.variant = 0;
-        state.flag = false;
+        state.sitting = false;
+        state.angry = false;
+        state.holdingStolen = false;
+        state.isVendor = false;
         if (extraExtractor != null) {
             extraExtractor.accept(entity, state);
         }

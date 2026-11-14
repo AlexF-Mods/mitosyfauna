@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "combat",
+  "category": "equipment",
   "ingredients": [
     "mitosyfauna:dart_toxin",
     "minecraft:arrow",

@@ -78,7 +78,7 @@ public class PatasolaEntity extends MythBossEntity {
                 double dz = player.getZ() - getZ();
                 double len = Math.max(0.01, Math.hypot(dx, dz));
                 this.setDeltaMovement((dx / len) * 0.42, 0.36, (dz / len) * 0.42);
-                this.hurtMarked = true;
+                this.needsSync = true;
                 hopCooldownTicks = 22;
             }
         }

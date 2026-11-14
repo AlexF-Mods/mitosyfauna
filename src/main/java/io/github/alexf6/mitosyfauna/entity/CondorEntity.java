@@ -42,7 +42,7 @@ public class CondorEntity extends Animal {
 
     public CondorEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
-        this.moveControl = new FlyingMoveControl(this, 16, true);
+        this.moveControl = new FlyingMoveControl<>(this, 16, true);
     }
 
     public static AttributeSupplier.Builder createAttributes() {

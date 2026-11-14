@@ -40,7 +40,7 @@ public class FolkProjectile extends ThrowableProjectile {
                     double dz = target.getZ() - proj.getZ();
                     double len = Math.max(0.01, Math.hypot(dx, dz));
                     living.push((dx / len) * 0.55, 0.25, (dz / len) * 0.55);
-                    living.hurtMarked = true;
+                    living.needsSync = true;
                 }
             }
         },
@@ -89,7 +89,8 @@ public class FolkProjectile extends ThrowableProjectile {
     }
 
     public FolkProjectile(EntityType<? extends ThrowableProjectile> entityType, LivingEntity shooter, Level level, Kind kind) {
-        super(entityType, shooter, level);
+        super(entityType, shooter.getX(), shooter.getEyeY() - 0.1, shooter.getZ(), level);
+        this.setOwner(shooter);
         setKind(kind);
     }
 
@@ -103,7 +104,6 @@ public class FolkProjectile extends ThrowableProjectile {
 
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder) {
-        super.defineSynchedData(builder);
         builder.define(DATA_KIND, Kind.WATER_JET.id);
     }
 

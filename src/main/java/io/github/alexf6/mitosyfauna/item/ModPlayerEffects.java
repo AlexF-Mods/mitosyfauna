@@ -34,7 +34,7 @@ public final class ModPlayerEffects {
         }
         Level level = player.level();
         BlockPos pos = player.blockPosition();
-        long dayTime = Math.floorMod(level.getDayTime(), 24000L);
+        long dayTime = Math.floorMod(level.getOverworldClockTime(), 24000L);
         boolean isNight = dayTime >= 13000L && dayTime < 23500L;
 
         ItemStack head = player.getItemBySlot(EquipmentSlot.HEAD);

@@ -96,7 +96,7 @@ public final class ItemAbilities {
         if (!level.isClientSide()) {
             Vec3 look = player.getLookAngle();
             player.push(look.x * 1.15, 0.32, look.z * 1.15);
-            player.hurtMarked = true;
+            player.needsSync = true;
             player.addEffect(new MobEffectInstance(MobEffects.SPEED, 120, 1));
             player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 220, 0));
             player.getCooldowns().addCooldown(stack, 160);
@@ -144,7 +144,7 @@ public final class ItemAbilities {
             Vec3 away = mob.position().subtract(player.position());
             double horiz = Math.max(0.01, Math.hypot(away.x, away.z));
             mob.push((away.x / horiz) * horizontalForce, verticalForce, (away.z / horiz) * horizontalForce);
-            mob.hurtMarked = true;
+            mob.needsSync = true;
         }
     }
 }
